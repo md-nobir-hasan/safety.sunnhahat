@@ -76,7 +76,8 @@
                     @foreach ($product as $product)
                         <div class="box">
                             @php
-                                $discount = ($product->discount * $product->price) / 100;
+                                $discount = $product->discount;
+                                $discount_price = $product->price - $discount;
                             @endphp
                             <span class="discount">-{{ round($discount) }}৳</span>
                             <div class="image">
@@ -96,10 +97,7 @@
                             </div>
                             <div class="content">
                                 <h3>{{ $product->title }}</h3>
-                                @php
-                                    $discount = ($product->discount * $product->price) / 100;
-                                    $discount_price = $product->price - $discount;
-                                @endphp
+
                                 <div class="price"> {{ round($discount_price) }}৳
                                     <span>{{ round($product->price) }}৳</span>
                                 </div>
