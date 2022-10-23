@@ -81,7 +81,7 @@
                                                     @else
                                                         <span class="badge badge-danger order_status"
                                                             onclick="orderStatus({{ $order->id }},{{ $key }})"
-                                                            id="order_status{{ $key }}">{{ 'new' }}</span>
+                                                            id="order_status{{ $key }}">{{ $order->order_status }}</span>
                                                     @endif
                                                 </a>
                                             </td>
@@ -124,18 +124,18 @@
                 dom: 'Bfrtip',
                 buttons: [{
                         extend: 'pdfHtml5',
-                        title: 'District Management',
+                        title: 'Orders',
                         download: 'open',
                         orientation: 'potrait',
                         pagesize: 'LETTER',
                         exportOptions: {
-                            columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+                            columns: [0, 1, 2, 3, 4, 5, 6, 7, 8]
                         }
                     },
                     {
                         extend: 'print',
                         exportOptions: {
-                            columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+                            columns: [0, 1, 2, 3, 4, 5, 6, 7, 8]
                         }
                     }, 'pageLength'
                 ]
@@ -192,34 +192,3 @@
         }
     </script>
 @endpush
-{{-- var form_data = new FormData();
-form_data.append('name', $('#name').val());
-form_data.append('address', $('#address')
-.val());
-form_data.append('discount', discount_v);
-form_data.append('id', data[0].cake_id);
-$.ajax({
-method: "POST",
-url: '{{ url('order.store') }}',
-data: form_data,
-// dataType:'json',
-contentType: false,
-cache: false,
-processData: false,
-success: function(value) {
-// alert(value);
-// $.ajax({
-// cache: false,
-// url: "{{ url('order.store') }}",
-// method: "POST",
-// success: function(
-// data) {
-// $("#show_data")
-// .html(
-// data
-// );
-// }
-// });
-
-}
-}); --}}
