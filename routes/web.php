@@ -25,9 +25,9 @@ use App\Http\Controllers\OrderStatusController;
 Route::get('/', [FrontendController::class,'index'])->name('home');
  Route::post('order/store',[OrderController::class,'store'])->name('order.store');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 Route::group(['middleware'=>['auth']],function(){
 
