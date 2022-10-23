@@ -30,7 +30,7 @@
         @include('backend.partial.sidebar')
 
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper  py-5 px-5">
+        <div class="content-wrapper  py-md-5 px-md-5">
             @yield('content')
         </div>
 
