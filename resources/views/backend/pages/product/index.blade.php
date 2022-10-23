@@ -93,8 +93,8 @@
                                                         class="btn btn-dark btnEdit"><i class="fas fa-edit"></i></a>
                                                     {{-- @endif --}}
                                                     {{-- @if (Auth::user()->can('delete product') || Auth::user()->role->id == 1) --}}
-                                                    <a href="{{ route('product.destroy', $value->id) }}"
-                                                        class="btn btn-danger btnDelete"><i class="fas fa-trash"></i></a>
+                                                    {{-- <a href="{{ route('product.destroy', $value->id) }}"
+                                                        class="btn btn-danger btnDelete"><i class="fas fa-trash"></i></a> --}}
                                                     {{-- @endif --}}
                                                 </div>
                                             </td>
