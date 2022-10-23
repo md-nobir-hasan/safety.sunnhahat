@@ -174,7 +174,8 @@
                                                         </label>
                                                         <input type="tel" name="phone" class="form-control"
                                                             id="phone" aria-describedby="inputGroupPrepend"
-                                                            required placeholder="আপনার ফোন নাম্বার লিখুন">
+                                                            required placeholder="আপনার ১১ সংখ্যার ফোন নাম্বারটি লিখুন"
+                                                            pattern="[0-9]{11}">
                                                     </div>
 
                                                     <div class="col-md-12 mt-4">

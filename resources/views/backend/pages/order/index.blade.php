@@ -81,7 +81,7 @@
                                                     @else
                                                         <span class="badge badge-danger order_status"
                                                             onclick="orderStatus({{ $order->id }},{{ $key }})"
-                                                            id="order_status{{ $key }}">{{ $order->order_status }}</span>
+                                                            id="order_status{{ $key }}">{{ 'new' }}</span>
                                                     @endif
                                                 </a>
                                             </td>
